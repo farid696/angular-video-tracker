@@ -1,6 +1,7 @@
 <app-video-card
   *ngFor="let v of videos"
-  (click)="selectVideo(v)"
   [video]="v"
   [isSelected]="selectedId === v.id"
+  [routerLink]="''"
+  [queryParams]="{ videoId: v.id }"
 ></app-video-card>
